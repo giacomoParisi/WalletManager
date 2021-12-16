@@ -6,9 +6,9 @@ from django.db import models
 
 class Transaction(models.Model):
     type = models.CharField(
-        max_length=2,
+        max_length=20,
         choices=TransactionType.choices,
         default=TransactionType.MISCELLANEOUS,
     )
-    descritpion = models.CharField()
+    descritpion = models.CharField(max_length=50)
     date = models.DateField()

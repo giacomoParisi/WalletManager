@@ -1,7 +1,7 @@
-from enum import Enum
+from django.db import models
 
 
-class TransactionType(Enum):
+class TransactionType(models.TextChoices):
     HOME = 'HOME'
     FOOD = 'FOOD'
     SERVICES = 'SERVICES'
