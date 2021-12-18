@@ -56,7 +56,9 @@ ROOT_URLCONF = 'WalletManager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / "wallet_manager/templates/wallet_manager"
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
