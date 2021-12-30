@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Test from "./routes/Test";
-import NavBar from "./components/navBar";
+import NavBar from "./components/navbar/navbar";
 import { ThemeProvider } from "styled-components";
 import { useSelector } from 'react-redux';
 import getTheme from "./themes/themeProvider";

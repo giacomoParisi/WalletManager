@@ -1,0 +1,13 @@
+.light {
+    --background: #FFFFFF;
+    --primary: #764ABC;
+    --onBackground: #000000;
+    --onPrimary: #FFFFFF;
+}
+
+.dark {
+    --background: #000000;
+    --primary: #764ABC;
+    --onBackground: #FFFFFF;
+    --onPrimary: #FFFFFF;
+}
