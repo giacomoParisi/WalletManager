@@ -1,8 +1,13 @@
-import Header from "../components/header/header"
+import Header from '../components/header/header'
+import { Transactions } from '../components/transactions/Transactions'
 
-const Home = () => 
-<div>
-    <Header/>
-</div>;
+function Home() {
+    return (
+        <div>
+            <Header />
+            <Transactions />
+        </div>
+    )
+}
 
-export default Home;
+export default Home
