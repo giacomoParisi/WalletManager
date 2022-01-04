@@ -1,6 +1,16 @@
 .transaction-card {
-    display: grid;
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
     border-radius: 10px;
     padding: 20px;
+}
+
+.transaction-period {
+    align-self: center;
+}
+
+.transaction-chart {
+    align-self: center;
 }

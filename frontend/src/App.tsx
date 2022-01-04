@@ -12,6 +12,8 @@ import { Theme } from './themes/themes'
 const GlobalStyle = createGlobalStyle`
     body {
       background-color: ${(props) => (props.theme as Theme).background};
+      // eslint-disable-next-line max-len
+      font-family: system-ui
     }
 `
 

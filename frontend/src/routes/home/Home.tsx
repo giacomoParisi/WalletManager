@@ -7,7 +7,7 @@ function Home() {
         <div>
             <Header />
             <div className="home-content">
-                <Transactions />
+                <Transactions startDate={new Date()} endDate={new Date()} />
             </div>
         </div>
     )
