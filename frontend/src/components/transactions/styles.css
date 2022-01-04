@@ -1,0 +1,6 @@
+.transaction-card {
+    display: grid;
+    width: 200px;
+    border-radius: 10px;
+    padding: 20px;
+}

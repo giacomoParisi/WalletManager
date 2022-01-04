@@ -1,7 +1,3 @@
-import LIGHT from './light'
-import DARK from './dark'
-import BASIC from './dark'
+import { light, dark } from './themes'
 
-export {
-    BASIC, LIGHT, DARK
-}
+export { light, dark }

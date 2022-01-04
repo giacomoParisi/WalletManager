@@ -6,6 +6,10 @@ export type Transaction = {
     date: string
 }
 
+export type TransactionGroup = {
+    value: number
+}
+
 export type TransactionState = {
     loading: boolean
     error: string | null

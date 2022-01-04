@@ -1,13 +1,12 @@
-import { BASIC, LIGHT, DARK } from "./";
-import { Themes } from "./themes";
+import { dark, light, Themes } from './themes'
 
 export default function getTheme(theme: Themes) {
-  switch (theme) {
-    case Themes.LIGHT:
-      return LIGHT;
-    case Themes.DARK:
-      return DARK;
-    default:
-      return BASIC;
-  }
+    switch (theme) {
+        case Themes.LIGHT:
+            return light
+        case Themes.DARK:
+            return dark
+        default:
+            return light
+    }
 }

@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
 import { fetchTransactions } from './fetchTransactions'
-import { TransactionState } from './types'
+import { Transaction, TransactionState } from './types'
 
 export const transactionsSlice = createSlice({
     name: 'links',
@@ -27,7 +27,7 @@ export const transactionsSlice = createSlice({
         builder.addCase(fetchTransactions.fulfilled, (state, { payload }) => {
             // We add all the new todos into the state
             // and change `status` back to `idle`:
-            state.data.push(...payload)
+            state.data = payload
             state.loading = false
         })
 
@@ -40,5 +40,9 @@ export const transactionsSlice = createSlice({
         })
     },
 })
+
+export const dataSelector: (state: RootState) => Transaction[] = (
+    state: RootState
+) => state.transactions.data
 
 export default transactionsSlice.reducer
