@@ -1,15 +1,20 @@
 import styled from 'styled-components'
+import './styles.css'
 
-const HeaderDiv = styled.div`
+const HeaderRoot = styled.div`
     background-color: ${(props) => props.theme.primary};
+    color: ${(props) => props.theme.onPrimary};
+`
+
+const HeaderTitle = styled.h1`
     color: ${(props) => props.theme.onPrimary};
 `
 
 function Header() {
     return (
-        <HeaderDiv className="container-fluid text-center p-3">
-            <h1>Wallet Manager</h1>
-        </HeaderDiv>
+        <HeaderRoot className="header">
+            <HeaderTitle className="header-title">Wallet Manager</HeaderTitle>
+        </HeaderRoot>
     )
 }
 

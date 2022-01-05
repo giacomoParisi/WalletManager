@@ -1,1 +1,9 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: row;
+}
 
+.sidebar-content {
+  flex-grow: 1;
+  background-color: violet;
+}

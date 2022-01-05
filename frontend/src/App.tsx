@@ -4,10 +4,10 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { useSelector } from 'react-redux'
 import Home from './routes/home/Home'
 import Test from './routes/Test'
-import NavBar from './components/navbar/navbar'
 import getTheme from './themes/themeProvider'
 import { selectorTheme } from './app/slicer'
 import { Theme } from './themes/themes'
+import { SideBar } from './components/sidebar/SideBar'
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -24,11 +24,15 @@ function App() {
         <ThemeProvider theme={getTheme(theme)}>
             <Router>
                 <GlobalStyle />
-                <NavBar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/test" element={<Test />} />
-                </Routes>
+                <div className="sidebar-container">
+                    <SideBar />
+                    <div className="sidebar-content">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/test" element={<Test />} />
+                        </Routes>
+                    </div>
+                </div>
             </Router>
         </ThemeProvider>
     )

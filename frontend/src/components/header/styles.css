@@ -1,0 +1,10 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10vh;
+}
+
+.header-title {
+    align-self: center;
+}
