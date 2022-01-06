@@ -1,0 +1,23 @@
+.sidebar-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-text {
+    font-weight: bold;
+    color: var(--onBackground);
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+}
+
+.sidebar-button :hover{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+}

@@ -1,20 +1,15 @@
 import { useEffect } from 'react'
-import styled from 'styled-components'
 import { PieChart, Pie, Legend } from 'recharts'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { fetchTransactions } from './fetchTransactions'
 import { dataSelector } from './transactionsSlice'
 import { TransactionGroup } from './types'
-import './styles.css'
+import './transactions.css'
 
 type TransactionsProps = {
     startDate: Date
     endDate: Date
 }
-
-const TransactionCard = styled.div`
-    background-color: ${(props) => props.theme.surface};
-`
 
 const dateLabel = (start: Date, end: Date) => {
     const startMonth = start.getUTCMonth() + 1
@@ -67,7 +62,7 @@ export function Transactions({ startDate, endDate }: TransactionsProps) {
     ]
 
     return (
-        <TransactionCard className="transaction-card">
+        <div className="transaction-card">
             <h4 className="transaction-period">
                 {dateLabel(startDate, endDate)}
             </h4>
@@ -87,6 +82,6 @@ export function Transactions({ startDate, endDate }: TransactionsProps) {
                     height={36}
                 />
             </PieChart>
-        </TransactionCard>
+        </div>
     )
 }

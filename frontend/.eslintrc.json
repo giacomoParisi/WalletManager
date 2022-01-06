@@ -42,7 +42,8 @@
         "react/react-in-jsx-scope": "off",   
         "jsx-a11y/anchor-is-valid": "off",
         "no-param-reassign": "off",
-        "jsx-a11y/label-has-associated-control": "off"
+        "jsx-a11y/label-has-associated-control": "off",
+        "react/function-component-definition": "off"
     },
     "settings": {
         "import/resolver": {

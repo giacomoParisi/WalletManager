@@ -1,0 +1,22 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px; 
+}
+
+.logo-name {
+    font-size: 20px;
+    font-weight: bold;
+    flex-grow: 2;
+    color: var(--onBackground);
+}

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { WalletManagerError } from '../../entities/WalletManagerError'
+import { WalletManagerError } from '../../models/WalletManagerError'
 
 const BASE_URL = 'http://localhost:8000'
 

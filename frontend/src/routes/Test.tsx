@@ -1,3 +1,5 @@
-const Test = () => <div>Test</div>;
+function Test() {
+    return <div>Test</div>
+}
 
-export default Test;
+export default Test

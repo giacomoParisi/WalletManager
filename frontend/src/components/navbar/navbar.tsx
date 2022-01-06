@@ -1,35 +1,29 @@
 import { ReactElement } from 'react'
-import { useNavigate } from 'react-router-dom'
-import logo from '../../assets/images/logo.png'
-import light from '../../assets/images/light.png'
-import dark from '../../assets/images/dark.png'
+import lightImage from '../../assets/images/light.png'
+import darkImage from '../../assets/images/dark.png'
 import { darkTheme, lightTheme, selectorTheme } from '../../app/slicer'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { Themes } from '../../themes/themes'
 import Switch from '../switch/switch'
+import { light } from '../../themes/theme'
 
 function NavBar(): ReactElement {
     const theme = useAppSelector(selectorTheme)
     const dispatch = useAppDispatch()
 
     const changeTheme: () => void = () => {
-        if (theme === Themes.LIGHT) dispatch(darkTheme())
+        if (theme === light) dispatch(darkTheme())
         else dispatch(lightTheme())
     }
 
     const themeIcon: () => string = () => {
-        if (theme === Themes.LIGHT) return light
-        return dark
+        if (theme === light) return lightImage
+        return darkImage
     }
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand">
-                    {' '}
-                    <img src={logo} alt="" width="30" height="24" /> Wallet
-                    Manager
-                </a>
+                <a className="navbar-brand">Manager</a>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -101,7 +95,7 @@ function NavBar(): ReactElement {
                     </ul>
                     <form className="d-flex">
                         <Switch
-                            isOn={theme === Themes.LIGHT}
+                            isOn={theme === light}
                             icon={themeIcon()}
                             handleToggle={() => {
                                 changeTheme()

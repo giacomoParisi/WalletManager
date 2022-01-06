@@ -1,25 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Themes } from '../themes/themes'
 import { RootState } from './store'
+import { dark, light, Theme } from '../themes/theme'
 
 export const slicer = createSlice({
     name: 'app',
     initialState: {
-        theme: Themes.LIGHT,
+        theme: light,
     },
     reducers: {
         darkTheme: (state) => {
-            state.theme = Themes.DARK
+            state.theme = dark
         },
         lightTheme: (state) => {
-            state.theme = Themes.LIGHT
+            state.theme = light
         },
     },
 })
 
 export const { darkTheme, lightTheme } = slicer.actions
 
-export const selectorTheme: (state: RootState) => Themes = (state: RootState) =>
+export const selectorTheme: (state: RootState) => Theme = (state: RootState) =>
     state.app.theme
 
 export default slicer.reducer
