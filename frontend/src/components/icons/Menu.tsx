@@ -1,7 +1,7 @@
 import { IconProps } from './IconProps'
 
 /* eslint-disable max-len */
-export function Menu({ color, className }: IconProps) {
+export function Menu({ className }: IconProps) {
     return (
         <svg
             version="1.0"
@@ -14,7 +14,6 @@ export function Menu({ color, className }: IconProps) {
         >
             <g
                 transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                fill={color}
                 stroke="none"
             >
                 <path

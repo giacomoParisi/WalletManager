@@ -1,14 +1,14 @@
 import { Transactions } from '../../components/transactions/Transactions'
-import './styles.css'
+import './Dashboard.css'
 
-function Home() {
+function Dashboard() {
     return (
-        <div className="home">
-            <div className="home-content">
+        <div className="dashboard">
+            <div className="dashboard-content">
                 <Transactions startDate={new Date()} endDate={new Date()} />
             </div>
         </div>
     )
 }
 
-export default Home
+export default Dashboard

@@ -1,20 +1,28 @@
-import { useAppSelector } from '../../../../app/hooks'
-import { selectorTheme } from '../../../../app/slicer'
-import { Dashboard } from '../../../icons/Dashboard'
+import { ReactElement } from 'react'
+import { IconProps } from '../../../icons/IconProps'
 import './SidebarButton.css'
 
-export const SidebarButton = () => {
-    const theme = useAppSelector(selectorTheme)
+export type SidebarButtonProps = {
+    text: string
+    icon: (props: IconProps) => ReactElement
+    active: boolean
+    onClick: () => void
+}
+
+export const SidebarButton = ({
+    text,
+    icon,
+    active,
+    onClick,
+}: SidebarButtonProps) => {
+    const activeSuffix = active ? 'active' : ''
 
     return (
-        <div className="sidebar-button">
-            <div className="sidebar-button">
-                <Dashboard
-                    className="sidebar-icon"
-                    color={theme.palette['--onBackground']}
-                />
-                <div className="sidebar-text">Dashboard</div>
-            </div>
+        <div className={`sidebar-button ${activeSuffix}`} onKeyUp={onClick}>
+            {icon({
+                className: 'sidebar-icon',
+            })}
+            <div className="sidebar-text">{text}</div>
         </div>
     )
 }

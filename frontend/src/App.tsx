@@ -1,10 +1,9 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './routes/home/Home'
-import Test from './routes/Test'
-import { SideBar } from './components/sidebar/Sidebar'
+import { BrowserRouter } from 'react-router-dom'
+import { Sidebar } from './components/sidebar/Sidebar'
 import { useAppSelector } from './app/hooks'
 import { selectorTheme } from './app/slicer'
+import Navigator from './routes/Navigator'
 
 function App() {
     const theme = useAppSelector(selectorTheme)
@@ -17,17 +16,14 @@ function App() {
                 } as React.CSSProperties
             }
         >
-            <Router>
+            <BrowserRouter>
                 <div className="sidebar-container">
-                    <SideBar />
+                    <Sidebar />
                     <div className="sidebar-content">
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/test" element={<Test />} />
-                        </Routes>
+                        <Navigator />
                     </div>
                 </div>
-            </Router>
+            </BrowserRouter>
         </div>
     )
 }
