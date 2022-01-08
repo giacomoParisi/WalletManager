@@ -1,5 +1,5 @@
 import { Logo } from '../../../icons/Logo'
-import { Menu } from '../../../icons/Menu'
+import { Menu } from '../../../icons/sidebar/Menu'
 import './SidebarLogo.css'
 
 export const SidebarLogo = () => {

@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { IconProps } from './IconProps'
+import { IconProps } from '../IconProps'
 
 export function Dashboard({ className }: IconProps) {
     return (

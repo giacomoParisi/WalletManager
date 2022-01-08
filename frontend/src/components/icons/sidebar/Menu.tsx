@@ -1,4 +1,4 @@
-import { IconProps } from './IconProps'
+import { IconProps } from '../IconProps'
 
 /* eslint-disable max-len */
 export function Menu({ className }: IconProps) {

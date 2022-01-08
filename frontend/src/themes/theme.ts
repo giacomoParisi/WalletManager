@@ -3,6 +3,10 @@ export enum Color {
     DARK_VIOLET = '#250341',
     LIGHT_GRAY = '#F4F4F4',
     WHITE = '#FFFFFF',
+    RED = '#d14728',
+    GREEN = '#28B547',
+    BLACK = '#232324',
+    GRAY = '#95959c',
 }
 
 export const enum ThemeType {
@@ -15,13 +19,19 @@ export interface Palette {
     '--onPrimary': Color
     '--background': Color
     '--onBackground': Color
+    '--onBackgroundSecondary': Color
+    '--positive': Color
+    '--negative': Color
 }
 
 export const lightPalette: Palette = {
     '--primary': Color.VIOLET,
     '--onPrimary': Color.WHITE,
     '--background': Color.WHITE,
-    '--onBackground': Color.DARK_VIOLET,
+    '--onBackground': Color.BLACK,
+    '--onBackgroundSecondary': Color.GRAY,
+    '--positive': Color.GREEN,
+    '--negative': Color.RED,
 }
 
 export const darkPalette: Palette = {

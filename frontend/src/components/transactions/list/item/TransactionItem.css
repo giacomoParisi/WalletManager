@@ -1,0 +1,54 @@
+.transaction-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.exit {
+    fill: var(--negative);
+    width: 30px;
+    height: 30px;
+}
+
+.enter {
+    fill: var(--positive);
+    width: 30px;
+    height: 30px;
+}
+
+.transaction-description {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--onBackground);
+}
+
+.transaction-type {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    color: var(--onBackgroundSecondary);
+}
+
+.transaction-type-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.transaction-date {
+    font-size: 14px;
+    color: var(--onBackgroundSecondary);
+}
+
+.transaction-value {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.transaction-value.positive {
+    color: var(--positive); 
+}
+
+.transaction-value.negative {
+    color: var(--negative); 
+}

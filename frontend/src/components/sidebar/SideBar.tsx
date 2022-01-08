@@ -2,9 +2,9 @@ import './Sidebar.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import SidebarButton, { SidebarButtonProps } from './items/button/SidebarButton'
 import { SidebarLogo } from './items/logo/SidebarLogo'
-import { Dashboard } from '../icons/Dashboard'
+import { Dashboard } from '../icons/sidebar/Dashboard'
 import { IconProps } from '../icons/IconProps'
-import { Transactions } from '../icons/Transactions'
+import { Transactions } from '../icons/sidebar/Transactions'
 import { Destination } from '../../routes/Navigator'
 
 export const Sidebar = () => {
